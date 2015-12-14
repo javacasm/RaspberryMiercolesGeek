@@ -11,5 +11,5 @@
   * Montajes sencillos
   * Placas para montajes
 * Proyectos (@demiurgosoft)
-  * Server estilo Dropbox (usando owncloud) y webserver típico
-  * Centro de videojuegos chulo
+  * Jugando al Crash Bandcoot con RetroPie
+  * Servidor Web y nube (OwnCloud)

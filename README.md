@@ -2,7 +2,7 @@
 
 ### 16-12-2015
 
-![cc](./imagenes/Licencia\ CC.png)
+![cc](./charla/imagenes/Licencia\ CC.png)
 
 
 ### Índice

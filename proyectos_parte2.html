@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cool Stuff with RPI</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+ 	  body { font-family: 'Droid Serif','Ubuntu'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz','Ubuntu';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+Raspberry pi
+============
+##Episode II    
+_Andrés Ortiz Corrales_ - _@demiurgosoft_      
+<https://github.com/demiurgosoft>           
+
+---
+
+class: center, middle
+# Cool Stuff
+
+**Herramientas básicas**  
+**Vanilla raspbian**    
+**Retro Pi**    
+**WebServer & Cloud storage**    
+
+---
+
+# Herramientas básicas
+* **ssh:** Remote shell `ssh pi@192.168.x.y`
+
+* **sftp:** Uploading/Downloading files
+	1. `sftp pi@192.168.x.y`
+	2. `ls,lls,cd,lcd`
+	3. `put` & `get`
+	4. Or just use filezilla
+
+---
+
+# Herramientas básicas: Cargando imágenes
+
+* **Linux:**
+	1. Mirar donde se haya montado la tarjeta y desmontarla (`umount /dev/sdb1`)
+	1. `dd bs=4M if=myraspbian.img of=/dev/sdb`
+		* /dev/sdb o donde se haya montado
+
+* **Windows:** Usar Win32DiskImager o similar
+
+Más información en: <https://www.raspberrypi.org/documentation/installation/installing-images>
+
+---
+
+class: center, middle
+
+# Demo: Vanilla Raspbian
+
+---
+
+# Para recordar
+1. `raspi-config` para configurar tu raspberry
+
+2. `sudo halt` para apagar la rpi
+
+3. **user:** _pi_ **password:** _raspberry_
+
+---
+
+# RetroPie
+Distribución basada en raspbian para jugar con emuladores (recomendado usar rpi2)
+
+**Wiki oficial:**  <https://github.com/RetroPie/RetroPie-Setup/wiki/First-Installation>
+
+---
+# RetroPie: Instrucciones
+1. Descargar la imagen: <http://blog.petrockblock.com/retropie/retropie-downloads/>
+	* Por defecto viene con algunos juegos y emuladores
+
+2. Cargar la BIOS del emulador a usar en `/home/pi/RetroPie/BIOS/`
+
+3. Cargar la ROM del juego en `/home/pi/RetroPie/roms/[emulador]/`
+
+---
+
+class: center, middle
+
+# Demo: RetroPie
+
+---
+
+# Web Server
+Al ser una distribución Linux, es relativamente sencillo instalar un servidor LAMP, como se haría en cualquier Linux, sin embargo, se recomienda usar NGINX en lugar de APACHE, pues es más ligero
+
+**Instrucciones de instalación:** <https://www.raspberrypi.org/documentation/remote-access/web-server/nginx.md>
+
+>A pesar de las limitaciónes, el poco consumo, baja temperatura y escaso tamaño lo hace una opción interesante para montar un servidor pachanguero
+
+<center> <img src="http://cdn.meme.am/instances/39432733.jpg" width="25%" height="25%" alt="Koala approved"/> </center>
+
+---
+# Web Server: OwnCloud
+Aunque lo lógico es usar la rpi para webservers estáticos y sencillos, una rpi b+ es capaz de sorportar un servidor nube [OwnCloud](https://owncloud.org/).
+
+Owncloud es un programa servidor en PHP estilo Dropbox, es posible montarlo sobre nuestro servidor nginx    
+[Instrucciones oficiales](https://doc.owncloud.org/server/7.0/admin_manual/installation/nginx_configuration.html)
+
+---
+
+class: center, middle
+
+# Demo: Tardis Cloud
+
+
+
+<!-- End -->
+    </textarea>
+    <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">
+    </script>
+    <!-- './remark.js' for local -->
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>

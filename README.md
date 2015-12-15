@@ -1,7 +1,14 @@
 # Charla sobre Raspberry en los MiercolesGeek
 
-### Índice inicial
+### 16-12-2015
 
+![cc](./imagenes/Licencia\ CC.png)
+
+
+### Índice
+
+
+* [Introduccion](./charla/charla.md)
 * Cómo instalar un SO
 * Primeros pasos
 * Comparación entre los modelos
@@ -10,6 +17,6 @@
   * Uso de GPIO
   * Montajes sencillos
   * Placas para montajes
-* Proyectos (@demiurgosoft)
+* [Proyectos](./proyectos_parte2.html) (@demiurgosoft)
   * Jugando al Crash Bandcoot con RetroPie
   * Servidor Web y nube (OwnCloud)

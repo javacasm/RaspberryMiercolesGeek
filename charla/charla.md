@@ -4,13 +4,10 @@ José Antonio Vacas @javacasm
 
 ![cc](./imagenes/Licencia\ CC.png)
 
-### Índice inicial
-
 
 1. Introducción
   1. [Historia](./historia.md)
-  1. [Proyectos donde la usan](./proyectos.md)
-  1. [Raspberry Pi en los medios](./raspiMedios.md)
+  1. [Proyectos donde la usan](./proyectos.md) [Raspberry Pi en los medios](./raspiMedios.md)
   1. [Iniciativas similares](./iniciativasSimilares.md)  [clones](./clones.md)
   1. [¿Raspberry o arduino?](./raspberryVSarduino.md)
 
@@ -37,4 +34,3 @@ José Antonio Vacas @javacasm
 1. [Documentacion](./documentacion.md)
 
 1. [RaspiFAQ](./RaspiFAQ.md)
-=======

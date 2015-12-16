@@ -10,7 +10,7 @@
 
 # Precauciones
 
-* Antes de realizar cualquier tipo de conexión en los conectores o pines debemos de tener siempre la precaución de tener desconectada la alimentación de la Raspberry Pi. 
+* Antes de realizar cualquier tipo de conexión en los conectores o pines debemos de tener siempre la precaución de tener desconectada la alimentación de la Raspberry Pi.
 * Evitaremos derivaciones eléctricas o cortos .
 * Conviene recordar que los pines de la CPU de la placa están conectados directamente a los diferentes conectores y pines, con lo que cualquier cosa que hagamos sobre los pines la estamos haciendo directamente sobre la CPU.
 * También hay que tener en cuenta que los pines GPIO no soportan 5 V, sólo 3.3V y un máximo de 16 mA, por lo que hay que tomar precauciones en este sentido.
@@ -31,12 +31,15 @@ Las versiones de 40 pines
 
 ## Librerías
 
-Hay 4 librerías GPIO
+Hay ~~cuatro~~ 5 librerías GPIO
 
 * Shell (línea de comandos)
 * Rpi. GPIO
 * wiringPi (Gordon Henderson wiringpi.com)
 * BCM 2835
+* [ **GPIO ZERO**](https://www.raspberrypi.org/blog/gpio-zero-a-friendly-python-api-for-physical-computing/) ([tutorial](https://www.raspberrypi.org/documentation/usage/gpio-plus-and-raspi2/))
+
+
 
 Veamos como llaman a los distintos pines
 
@@ -56,7 +59,7 @@ La compilamos
 
 	./build
 
-Y ya podemos udarla 
+Y ya podemos udarla
 
 	gpio readall
 
@@ -73,13 +76,13 @@ El montaje sería
 
 ![esquema](./imagenes/esquemaled.png)
 
-Hagamos un programa que parpadea el led conectado 
+Hagamos un programa que parpadea el led conectado
 
 	import time
 	# Importamos la librería wiringpi
 	import wiringpi2
 	#Configuramos la numeración de los pines con respecto al
-	#estandar de la librería wiringpi (pin de entrada salida 
+	#estandar de la librería wiringpi (pin de entrada salida
 	#	GPIO0)
 
 	io = wiringpi2.GPIO(wiringpi2.GPIO.WPI_MODE_PINS)
@@ -160,7 +163,7 @@ Para leer valores analógicos usaremos electrónica externa, com pueden se [esta
 
 ## Usos de los GPIOs
 
-* Encender apagar LEDs (no podemos aspirar a encender nada de mayor potencia directamente). Estas son las salidas digitales, capaces de estar en estado alto o bajo. 
+* Encender apagar LEDs (no podemos aspirar a encender nada de mayor potencia directamente). Estas son las salidas digitales, capaces de estar en estado alto o bajo.
 * Algunos de estos pines pueden generar PWM (modulación por ancho de pulso) protocolo que usan los servos.
 * Detectar pulsaciones de botones/interruptores. Estas son las entradas digitales.
 • Acceso al puerto serie por los terminales TX/TX
@@ -193,9 +196,9 @@ Para identificar más fácilmente los pines podemos usar una etiqueta
 ### Clobber
 
 * Es bastante arriesgado y complicado trabajar directamente con los pines del conector GPIO de la RaspBerry.
-* Existen en el mercado una gran variedad de placas que nos facilitan la vida. 
-* Algunas sólo nos facilitan la conexión. 
-* Otras nos proporcionan mayor funcionalidad. 
+* Existen en el mercado una gran variedad de placas que nos facilitan la vida.
+* Algunas sólo nos facilitan la conexión.
+* Otras nos proporcionan mayor funcionalidad.
 * En cualquier caso ganamos en tranquilidad al usarlas.
 
 
@@ -214,10 +217,10 @@ Se trata de una placa de prototipo especialmente adaptada al tamaño de la Raspb
 
 ![piface](./imagenes/piface.png)
 
-* Tiene un fin claramente educativo, 
-* Incluye diferentes dispositivos 
-* Leds que se pueden activar independientemente, 
-* 2 relés para activar cargas de potencia y 
+* Tiene un fin claramente educativo,
+* Incluye diferentes dispositivos
+* Leds que se pueden activar independientemente,
+* 2 relés para activar cargas de potencia y
 * 4 pulsadores conectados a otras tantas entradas
 
 ![esquemapiface](./imagenes/esquemapiface.png)
@@ -238,22 +241,22 @@ Es una placa de desarrollo con una enorme cantidad de complementos, como son con
 
 ![raspirobot](./imagenes/raspirobot.png)
 
-* El manejo de motores es mucho más complejo que el manejo de leds. 
-* La programación es exactamente la misma, 
+* El manejo de motores es mucho más complejo que el manejo de leds.
+* La programación es exactamente la misma,
 * La electrónica necesaria para controlarlos es totalmente diferente.
 * Si bien podemos conectar directamente un led a un pin de GPIO, conectar un motor es totalmente desaconsejable, por varias razones:
 	* La primera porque los motores requieren de mayor potencia para funcionar,
 	* Necesitaremos una electrónica capaz de gestionar estas potencias
-	* Serán controladas desde los pines de la RaspBerry. 
+	* Serán controladas desde los pines de la RaspBerry.
 	* En caso de forzar la electrónica de alimentación de nuestra Raspberry a dar una mayor potencia podríamos quemarla.
 	* El funcionamiento de los motores hace que estos generen al acelerar unas corrientes de inducción de sentido opuesto a las que les aplicamos para funcionar y que de no ser suprimidas podrían dañar la electrónica a la que están conectados.
 
 En la [web de raspbirobot](https://github.com/simonmonk/raspirobotboard/wiki) vemos instrucciones de montaje
 
-* Controla 2 motores, 
-* 2 leds, 
-* 2 entradas de pulsador, 
-* 2 salidas de colector abierto, para poder usar mayores potencias 
+* Controla 2 motores,
+* 2 leds,
+* 2 entradas de pulsador,
+* 2 salidas de colector abierto, para poder usar mayores potencias
 * Conector I2C y
 * otro serie
 
@@ -368,7 +371,7 @@ Estos son los pasos para instalar todo lo necesario
 	sudo apt-get install git python-opencv python-all-dev libopencv-dev
 	sudo modprobe servoblaster
 	git clone https://github.com/mitchtech/py_servo_facetracker
-	
+
 Y para ejecutarlo
 
 	cd py_servo_facetracker

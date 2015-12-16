@@ -55,7 +55,9 @@ http://blogthinkbig.com/4-alternativas-arduino-beaglebone-raspberrypi-nanode-was
 
 ![OrangePi](http://www.orangepi.org/orangepiplus/H3shuoming.jpg)
 
+[PINE A64](https://www.kickstarter.com/projects/pine64/pine-a64-first-15-64-bit-single-board-super-comput?ref=card)
 
+![pine](http://www.omicrono.com/wp-content/uploads/2015/12/pine-a64-1.jpg)
 ...
 
 [alternativas](http://blogthinkbig.com/alternativas-raspberry-pi/)

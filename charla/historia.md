@@ -20,19 +20,6 @@ Se trata de crear un sistema barato capaz de permitir enseñar a los niños (y a
 Utiliza un diseño avanzado
 ![avanzado](./imagenes/EncapsuladoCPU-RAM.JPG)
 
-# [Versiones](https://www.raspberrypi.org/documentation/hardware/raspberrypi/models/README.md)
-
-[Versión 2 B](https://www.raspberrypi.org/products/raspberry-pi-2-model-b/) (900MHz y 1Gb)
-
-[Versión B+](https://www.raspberrypi.org/documentation/hardware/raspberrypi/models/README.md#modelbplus) 2014
-
-![modeloB](./imagenes/ModeloB.jpg)
-
-Versión B (512M y ethernet)
-
-Versión A (256MB)
-
-[Comparativa Raspberry 2](https://learn.adafruit.com/introducing-the-raspberry-pi-2-model-b?view=all)
-
+[Modelos](./modelos.md)
 
 [La llegada de los clones](./clones.md)
